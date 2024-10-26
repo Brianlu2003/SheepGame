@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SheepGame</string>
+    <string name="hello_sheep_game">Hello, Sheep Game!</string>
+</resources>
