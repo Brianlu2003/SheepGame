@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder> {
-    private List<String> historyList;
+    private final List<String> historyList;
 
     public HistoryAdapter(List<String> historyList) {
         this.historyList = historyList;
@@ -20,7 +20,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
     @NonNull
     @Override
     public HistoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_history, parent, false);
         return new HistoryViewHolder(view);
     }
 
@@ -39,7 +39,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
 
         public HistoryViewHolder(@NonNull View itemView) {
             super(itemView);
-            historyText = itemView.findViewById(android.R.id.text1);
+            historyText = itemView.findViewById(R.id.historyItemText);
         }
     }
 }
